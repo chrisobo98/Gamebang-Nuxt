@@ -61,7 +61,7 @@ export default {
   },
   asyncData ({ params, error }) {
 
-          const proxyurl = 'https://cors-anywhere.herokuapp.com'
+          const proxyurl = 'https://cors-anywhere.herokuapp.com/'
 
     return axios.get(`${proxyurl}https://api.igdb.com/v4/games/${params.id}/?fields=name,cover.url,summary,platforms.name,first_release_date,websites,total_rating,screenshots.url,total_rating,platforms,screenshots,cover`)
     .then((res) => {
@@ -75,7 +75,7 @@ export default {
   },
   head() {
     return {
-      title: this.game.name + ' | Video Games'
+      title: this.game.name + ' | GameBang'
     }
   }
 }
