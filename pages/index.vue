@@ -28,27 +28,28 @@
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue'
+import axios from 'axios'
 
 export default {
   components : {
     Logo
   },
-  created() {
-    games = response.data
-  },
   asyncData({ params, error }) {
     return axios
-      .get(`https://my-api/posts/${params.id}`)
+      .get(`https://api.igdb.com/v4/games/?fields=name,genres.name,screenshots.*,hypes&order=hypes:desc&expand=genres`)
       .then(res => {
-        return { title: res.data.title }
+        return { 
+          games: res.data 
+          }
       })
       .catch(e => {
-        error({ statusCode: 404, message: 'Post not found' })
+        console.log(e)
       })
   },
   data() {
     return {
-      
+
     }
   }
 }
