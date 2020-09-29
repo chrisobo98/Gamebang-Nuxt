@@ -1,30 +1,14 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        gamebang-nuxt
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="container mx-auto">
+    <div class="game-container">
+      <div v-for="game in games" :key="game.id">
+        <img src="game.screenshots[0].url" alt="screenshots">
+        <div>{{ game.name }}</div>
+        <div>{{ game.genres[0].name }}</div>
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
