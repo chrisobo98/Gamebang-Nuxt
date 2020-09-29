@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="hero bg-grey-dark" :style="`background:url(${backgroundImage}); background-size:cover`">
-      <div class="container mx-auto flex flex-col md:flex-row items-end pb-8" style="height:350px">
+      <div class="container mx-auto flex flex-col md:flex-row items-end pb-8 p-6" style="height:350px">
         <div class="w-full md:w-1/4"></div>
         <div class="w-full md:w-3/4 md:ml-12">
           <h1 class="font-heading text-white">{{ game.name }}</h1>
@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <div class="container mx-auto flex flex-col md:flex-row">
+    <div class="container mx-auto flex flex-col md:flex-row p-6">
       <div class="w-full md:w-1/4 -mt-16">
         <img :src="game.cover.url.replace('t_thumb', 't_cover_big')" alt="cover" class="mb-8">
         <div class="mb-4">

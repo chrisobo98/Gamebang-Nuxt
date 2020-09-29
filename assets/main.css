@@ -4,3 +4,7 @@
 .page-enter, .page-leave-to {
     opacity: 0;
 }
+
+.overflow-dots {
+    text-overflow: ellipsis;
+}

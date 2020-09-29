@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-16">
+  <div class="container mx-auto py-16 p-6">
     <h1 class="font-heading uppercase mb-8">The Most Hyped Up Games Ever</h1>
     <div class="game-container flex flex-wrap -mx-4">
       <nuxt-link :to="'/games/' + game.id" v-for="game in games" :key="game.id" class="w-full md:w-1/5 px-4 mb-12 no-underline">
@@ -11,10 +11,10 @@
   </div>
 </template>
 
-</template>
-
 <script>
 import axios from 'axios'
+import '../assets/main.css'
+
 
 export default {
   components : {
@@ -42,9 +42,4 @@ export default {
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
 </style>
