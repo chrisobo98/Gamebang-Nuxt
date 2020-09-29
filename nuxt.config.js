@@ -20,6 +20,7 @@ export default {
   plugins: [
   ],
 
+  loading: { color: '#4fc08d'},
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
