@@ -60,7 +60,10 @@ export default {
     }
   },
   asyncData ({ params, error }) {
-    return axios.get(`https://api.igdb.com/v4/games/${params.id}/?fields=name,cover.url,summary,platforms.name,first_release_date,websites,total_rating,screenshots.url,total_rating,platforms,screenshots,cover`)
+
+          const proxyurl = 'https://cors-anywhere.herokuapp.com'
+
+    return axios.get(`${proxyurl}https://api.igdb.com/v4/games/${params.id}/?fields=name,cover.url,summary,platforms.name,first_release_date,websites,total_rating,screenshots.url,total_rating,platforms,screenshots,cover`)
     .then((res) => {
       return {
         game: res.data[0]
