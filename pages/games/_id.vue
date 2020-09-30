@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="hero bg-grey-dark" :style="`background:url(${backgroundImage}); background-size:cover`">
-      <div class="container mx-auto flex flex-col md:flex-row items-end pb-8 p-6" style="height:350px">
+    <div class="bg-indigo-900">
+      <div class="container mx-auto flex flex-col md:flex-row items-end pb-8 p-6" style="height:200px">
         <div class="w-full md:w-1/4"></div>
         <div class="w-full md:w-3/4 md:ml-12">
-          <h1 class="font-heading text-white">{{ game.name }}</h1>
+          <h1 class="font-black text-5xl font-heading font-sans text-lg text-white">{{ game.name }}</h1>
         </div>
       </div>
     </div>
@@ -20,10 +20,6 @@
         <div class="mb-4">
           <span class="font-semibold">Released:</span>
           <span>{{ new Date(game.first_release_date).toDateString() }}</span>
-        </div>
-
-        <div class="mb-6">
-          <a :href="getOfficialWebsite">Official Website</a>
         </div>
 
         <div class="mb-10" v-if="game.total_rating">
