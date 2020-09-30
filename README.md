@@ -1,3 +1,3 @@
 # gamebang-nuxt
 
-![alt text](https://ibb.co/kQJ2jNn)
+![alt text](https://i.ibb.co/qkCYKTG/Untitled-1.png)
