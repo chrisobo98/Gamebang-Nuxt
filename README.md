@@ -1,4 +1,4 @@
-# gamebang-nuxt
+# HypeGames-Nuxt
 
 ![alt text](https://i.ibb.co/qkCYKTG/Untitled-1.png)
 ![alt text](https://i.ibb.co/56p9TwV/nfsmw-hypegames.png)
