@@ -1,0 +1,23 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/hypegames/hypegames:latest || exit 0
+  - name: gcr.io/cloud-builders/docker
+    timeout: 1200s
+    args:
+      [
+        'build',
+        '-f',
+        'Dockerfile',
+        '-t',
+        'gcr.io/hypegames/hypegames',
+        '--cache-from',
+        'gcr.io/hypegames/hypegames:latest',
+        '.',
+      ]
+timeout: 1200s
+images:
+  - gcr.io/project-name/hypegames

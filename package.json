@@ -10,7 +10,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-postbuild": "npm run dev && npm start"
+    "heroku-postbuild": "npm run build && npm start"
   },
   "dependencies": {
     "axios": "^0.20.0",
