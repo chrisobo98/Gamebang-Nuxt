@@ -15,9 +15,11 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.5"
+    "nuxt": "^2.14.5",
+    "vuetify": "^2.5.7"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^4.2.1"
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "@nuxtjs/vuetify": "^1.12.1"
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto py-16 p-6">
     <h1
-      class="font-heading uppercase font-black text-4xl text-center font-heading font-sans mb-14"
+      class="font-heading uppercase font-black text-4xl text-center font-heading font-sans"
     >
       The Most Hyped Up Games Ever
     </h1>

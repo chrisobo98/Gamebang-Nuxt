@@ -1,12 +1,16 @@
 <template>
-  <div class="text-black antialiased">
-    <navigation></navigation>
-    <Nuxt />
-  </div>
+  <v-app>
+    <div class="text-black antialiased">
+      <navbar></navbar>
+      <Nuxt />
+      <Footer></Footer>
+    </div>
+  </v-app>
 </template>
 
 <script>
-import Navigation from "@/components/Navigation";
+import Navbar from "@/components/navbar.vue";
+import Footer from "@/components/footer.vue";
 import axios from "axios";
 
 axios.defaults.headers.common["Client-ID"] = "y55605g80xe9oogu0it9mla583bvez";
@@ -16,7 +20,8 @@ axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 export default {
   components: {
-    Navigation
+    Navbar,
+    Footer
   }
 };
 </script>
