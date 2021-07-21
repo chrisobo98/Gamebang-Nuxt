@@ -25,7 +25,7 @@
 
       <!-- Navbar -->
       <div class="hidden md:block">
-        <ul class="flex space-x-4 text-sm font-sans mt-4">
+        <ul class="flex space-x-4 text-sm font-sans mt-6">
           <li>
             <nuxt-link class="text-white" to="/">Home</nuxt-link>
           </li>
@@ -42,9 +42,67 @@
               style="color: #00c58e"
               class="cta bg-white hover:bg-blue-600 px-3 py-2 mt-n2 rounded text-black font-semibold"
               nuxt
+              >Log In</v-btn
+            >
+          </li>
+          <li>
+            <v-btn
+              to="/about"
+              href="#"
+              style="color: #00c58e"
+              class="cta bg-white hover:bg-blue-600 px-3 py-2 mt-n2 rounded text-black font-semibold"
+              nuxt
               >Sign Up</v-btn
             >
           </li>
+          <div class="d-flex mt-n2">
+            <v-badge
+              offset-x="30"
+              offset-y="10"
+              :value="hover"
+              color="green accent-4"
+              content="99+"
+              right
+              transition="slide-x-transition"
+            >
+              <v-hover v-model="hover">
+                <v-btn icon class="mr-4">
+                  <v-icon>mdi-inbox</v-icon>
+                </v-btn>
+              </v-hover>
+            </v-badge>
+            <v-row justify="center">
+              <v-menu bottom min-width="200px" rounded offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn icon x-large v-on="on">
+                    <v-avatar color="brown" size="48">
+                      <v-img
+                        src="https://randomuser.me/api/portraits/women/85.jpg"
+                      ></v-img>
+                    </v-avatar>
+                  </v-btn>
+                </template>
+                <v-card>
+                  <v-list-item-content class="justify-center">
+                    <div class="mx-auto text-center mt-2">
+                      <h3>Christopher</h3>
+                      <p class="text-caption mt-1">
+                        cb@gmail.com
+                      </p>
+                      <v-divider class="my-3"></v-divider>
+                      <v-btn depressed rounded text>
+                        Edit Account
+                      </v-btn>
+                      <v-divider class="my-3"></v-divider>
+                      <v-btn depressed rounded text>
+                        Disconnect
+                      </v-btn>
+                    </div>
+                  </v-list-item-content>
+                </v-card>
+              </v-menu>
+            </v-row>
+          </div>
         </ul>
       </div>
 
@@ -240,7 +298,12 @@
 export default {
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      hover: false,
+      fav: true,
+      menu: false,
+      message: false,
+      hints: true
     };
   },
   methods: {
