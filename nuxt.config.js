@@ -30,7 +30,12 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/vuetify',
   ],
-
+  vuetify: {
+    theme: {
+      // default theme is light mode
+      dark: true,
+    }
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
   ],

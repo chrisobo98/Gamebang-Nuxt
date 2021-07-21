@@ -1,9 +1,9 @@
 <template>
-  <nav class="w-full p-6 bg-purple-900">
+  <nav class="w-full px-6 pt-2 pb-5 bg-purple-900">
     <div class="flex items-center justify-between">
       <!-- Header logo -->
       <div>
-        <Tailwind />
+        <img width="40%" position="left" src="../assets/logo.png" />
       </div>
 
       <!-- Mobile toggle -->
@@ -25,7 +25,7 @@
 
       <!-- Navbar -->
       <div class="hidden md:block">
-        <ul class="flex space-x-8 text-sm font-sans">
+        <ul class="flex space-x-4 text-sm font-sans mt-4">
           <li>
             <nuxt-link class="text-white" to="/">Home</nuxt-link>
           </li>

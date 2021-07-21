@@ -1,11 +1,13 @@
 <template>
   <div class="container mx-auto py-16 p-6 mt-10">
     <h1
-      class="font-heading uppercase font-black text-4xl text-center font-heading font-sans"
+      class="font-heading uppercase font-black text-4xl text-center font-heading font-sans text-white"
     >
       The Most Hyped Up Games Ever
     </h1>
-    <h1 class="font-heading text-2xl text-center font-heading font-sans mb-12">
+    <h1
+      class="font-heading text-2xl text-center font-heading font-sans mb-12 text-white"
+    >
       Using Twitch's IGDB API, we're pulling up the games that had the most
       levels of hype
     </h1>
@@ -21,7 +23,7 @@
           alt="cover"
         />
         <div
-          class="text-black font-semibold text-lg overflow-hidden whitespace-no-wrap overflow-dots"
+          class="text-black font-semibold text-lg overflow-hidden whitespace-no-wrap overflow-dots text-white"
         >
           {{ game.name }}
         </div>
