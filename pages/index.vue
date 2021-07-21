@@ -59,27 +59,12 @@ export default {
       await axios
         .request(options)
         .then(res => {
-          console.log(res.data);
+          this.games = res.data;
         })
-        .catch(function(error) {
-          console.error(error);
+        .catch(e => {
+          console.log(e);
         });
     }
-  },
-  asyncData({ params, error }) {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    return axios
-      .post(
-        `${proxyurl}https://api.igdb.com/v4/games/?fields=name,genres.name,cover.url,hypes&order=hypes`
-      )
-      .then(res => {
-        return {
-          games: res.data
-        };
-      })
-      .catch(e => {
-        console.log(e);
-      });
   }
 };
 </script>
