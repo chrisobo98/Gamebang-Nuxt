@@ -8,7 +8,7 @@
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button @click="drawer">
+        <button @click="drawer" class="mt-4">
           <svg
             class="h-8 w-8 fill-current text-black"
             fill="none"
@@ -36,12 +36,13 @@
           <li><a href="#" class="">FAQ</a></li>
           <li><a href="#" class="">Contact</a></li>
           <li>
-            <nuxt-link
+            <v-btn
               to="/about"
               href="#"
               style="color: #00c58e"
-              class="cta bg-white hover:bg-blue-600 px-3 py-2 rounded text-black font-semibold"
-              >Sign Up</nuxt-link
+              class="cta bg-white hover:bg-blue-600 px-3 py-2 mt-n2 rounded text-black font-semibold"
+              nuxt
+              >Sign Up</v-btn
             >
           </li>
         </ul>
@@ -97,7 +98,7 @@
           @click="isOpen = false"
           class="flex w-full items-center p-4 border-b"
         >
-          <Tailwind />
+          <img width="40%" position="left" src="../assets/logo.png" />
         </span>
 
         <ul class="divide-y font-sans justify-center">

@@ -28,7 +28,7 @@
           {{ game.name }}
         </div>
         <div
-          class="text-grey-darker text-base overflow-hidden whitespace-no-wrap overflow-dots pb-1"
+          class="text-grey-darker text-base overflow-hidden whitespace-no-wrap overflow-dots pb-1 text-white"
         >
           {{ game.genres[0].name }}
         </div>
@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     async getHypeGames() {
-      const proxyurl = "https://cors-anywhere.herokuapp.com/";
+      const proxyurl = "https://blooming-taiga-18504.herokuapp.com/";
       const options = {
         method: "POST",
         url: `${proxyurl}https://api.igdb.com/v4/games/?fields=name,genres.name,cover.url,hypes&order=hypes`
@@ -61,12 +61,27 @@ export default {
       await axios
         .request(options)
         .then(res => {
-          this.games = res.data;
+          console.log(res.data);
         })
-        .catch(e => {
-          console.log(e);
+        .catch(function(error) {
+          console.error(error);
         });
     }
+  },
+  asyncData({ params, error }) {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    return axios
+      .post(
+        `${proxyurl}https://api.igdb.com/v4/games/?fields=name,genres.name,cover.url,hypes&order=hypes`
+      )
+      .then(res => {
+        return {
+          games: res.data
+        };
+      })
+      .catch(e => {
+        console.log(e);
+      });
   }
 };
 </script>
