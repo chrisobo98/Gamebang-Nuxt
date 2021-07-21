@@ -6,18 +6,17 @@
 </template>
 
 <script>
-import Navigation from '@/components/Navigation'
-import axios from 'axios'
+import Navigation from "@/components/Navigation";
+import axios from "axios";
 
-axios.defaults.headers.common['Client-ID'] = 'xhqybo0nhm7hscpd0oacjzs2rzb49r'
-axios.defaults.headers.common['Authorization'] = 'Bearer j7or84o4mqqjwk514jhcw6ql18uuzi'
-axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+axios.defaults.headers.common["Client-ID"] = "y55605g80xe9oogu0it9mla583bvez";
+axios.defaults.headers.common["Authorization"] =
+  "Bearer es0vv9ebcaykmrgrj1fr1a4unq2iyq";
+axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 export default {
   components: {
     Navigation
   }
-}
+};
 </script>
-
-
