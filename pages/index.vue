@@ -41,6 +41,31 @@ import "../assets/main.css";
 
 export default {
   components: {},
+  data() {
+    return {
+      games: []
+    };
+  },
+  async mounted() {
+    await this.getHypeGames();
+  },
+  methods: {
+    async getHypeGames() {
+      const proxyurl = "https://cors-anywhere.herokuapp.com/";
+      const options = {
+        method: "POST",
+        url: `${proxyurl}https://api.igdb.com/v4/games/?fields=name,genres.name,cover.url,hypes&order=hypes`
+      };
+      await axios
+        .request(options)
+        .then(res => {
+          console.log(res.data);
+        })
+        .catch(function(error) {
+          console.error(error);
+        });
+    }
+  },
   asyncData({ params, error }) {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     return axios
@@ -55,11 +80,6 @@ export default {
       .catch(e => {
         console.log(e);
       });
-  },
-  data() {
-    return {
-      games: []
-    };
   }
 };
 </script>
