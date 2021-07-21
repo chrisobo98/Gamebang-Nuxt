@@ -1,13 +1,13 @@
 <template>
   <v-footer dark padless>
-    <v-card-text class="justify-center d-flex">
+    <v-card-text class="justify-center d-flex bg-purple-900">
       <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
         <v-icon size="24px">
           {{ icon }}
         </v-icon>
       </v-btn>
     </v-card-text>
-    <v-row justify="center" no-gutters>
+    <v-row justify="center" no-gutters class="bg-purple-900">
       <v-btn
         v-for="link in links"
         :key="link"

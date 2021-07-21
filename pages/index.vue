@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-16 p-6">
+  <div class="container mx-auto py-16 p-6 mt-10">
     <h1
       class="font-heading uppercase font-black text-4xl text-center font-heading font-sans"
     >
