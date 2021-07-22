@@ -57,7 +57,7 @@
           </li>
           <div class="d-flex mt-n2">
             <v-badge
-              offset-x="30"
+              offset-x="50"
               offset-y="10"
               :value="hover"
               color="green accent-4"
@@ -66,7 +66,7 @@
               transition="slide-x-transition"
             >
               <v-hover v-model="hover">
-                <v-btn icon class="mr-4">
+                <v-btn icon class="mr-8">
                   <v-icon>mdi-inbox</v-icon>
                 </v-btn>
               </v-hover>
